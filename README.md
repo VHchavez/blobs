@@ -29,12 +29,11 @@ For the Full Jupyter tutorial see:
 
 
 ### Required Packages
+Set up a conda environment and proceed to install
 
 ```
-conda install jupyter-notebook
 conda install -c psi4 psi4
 conda install -c plotly plotly
-
 ```
 
 ### Installation
