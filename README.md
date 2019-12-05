@@ -16,7 +16,7 @@ Plotting a cube file just requires:
 ```
 import blob
 cube = blob.cube(wfn)
-cube.plot("Da.cube")
+cube.plot("Da.cube", iso=0.03)
 ```
 
 For the Full Jupyter tutorial see:
