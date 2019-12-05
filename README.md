@@ -10,5 +10,39 @@
 
 ---
 
+### Overview
+
 Calculate on Psi4, plot with Plotly all within your Jupyter Notebook
+<br>
+
+Take the Wavefunction object from your Psi4 calculations and plots the selected cubefiles. 
+Setting blob just requires:
+
+```
+import blob
+cube = blob.cube(wfn)
+cube.plot("Da.cube")
+```
+
+For the Full Jupyter tutorial see:
+/blobs/tutorials/basics. 
+
+
+### Required Packages
+
+```
+conda install jupyter-notebook
+conda install -c psi4 psi4
+conda install -c plotly plotly
+
+```
+
+### Installation
+```
+git clone https://github.com/VHchavez/blobs
+cd blobs
+pip install --user -e .
+```
+
+
 
