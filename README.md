@@ -1,24 +1,42 @@
+
 <p align="center">
-<img src="docs/media/logo_sub.png" alt="Psi4NumPy banner logo" height=300> <br>
-
-
-[![Travis Build Status](https://travis-ci.com/REPLACE_WITH_OWNER_ACCOUNT/blobs.svg?branch=master)](https://travis-ci.com/REPLACE_WITH_OWNER_ACCOUNT/blobs)
-[![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/REPLACE_WITH_APPVEYOR_LINK/branch/master?svg=true)](https://ci.appveyor.com/project/REPLACE_WITH_OWNER_ACCOUNT/blobs/branch/master)
-[![codecov](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/blobs/branch/master/graph/badge.svg)](https://codecov.io/gh/REPLACE_WITH_OWNER_ACCOUNT/blobs/branch/master)
-
-
-
+<br>
+<img src="docs/media/logo_sub.png" alt="Blobs" height=300> <br>
+<a href="https://travis-ci.org/VHChavez/blobs"><img src="https://travis-ci.org/VHChavez/blobs.svg?branch=master"></a>
+<a href="https://ci.appveyor.com/project/REPLACE_WITH_OWNER_ACCOUNT/blobs/branch/master"><img src="https://ci.appveyor.com/api/projects/status/REPLACE_WITH_APPVEYOR_LINK/branch/master?svg=true"></a>
+<a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" /></a>
+<br>
 </p>
 
+---
+
+### Overview
+Plotting a cube file just requires:
+
+```
+import blob
+cube = blob.cube(wfn)
+cube.plot("Da.cube")
+```
+
+For the Full Jupyter tutorial see:
+/blobs/tutorials/basics. 
+
+
+### Required Packages
+Set up a conda environment and proceed to install
+
+```
+conda install -c psi4 psi4
+conda install -c plotly plotly
+```
+
+### Installation
+```
+git clone https://github.com/VHchavez/blobs
+cd blobs
+pip install --user -e .
+```
 
 
 
-### Copyright
-
-Copyright (c) 2019, Victor H Chavez
-
-
-#### Acknowledgements
- 
-Project based on the 
-[Computational Molecular Science Python Cookiecutter](https://github.com/molssi/cookiecutter-cms) version 1.1.
