@@ -1,11 +1,11 @@
 """
-molecule.py
+cube.py
 Psi4 cube files visualization tool
 """
 
 import numpy as np
 import psi4
-import cube 
+import colors 
 
 import plotly.graph_objects as go
 import plotly.express as px
