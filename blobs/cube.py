@@ -5,10 +5,11 @@ Psi4 cube files visualization tool
 
 import numpy as np
 import psi4
-from colors import get_colors
+import cube 
 
 import plotly.graph_objects as go
 import plotly.express as px
+
 
 
 class Manager():
@@ -60,7 +61,7 @@ class Manager():
         z_geo = []
         color = []
         size = []
-        atoms_colors = get_colors()
+        atoms_colors = cube.colors.get_colors()
 
         for i in range(self.geometry.natom()):
             symbol.append(self.geometry.fsymbol(i))
