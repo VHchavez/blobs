@@ -23,8 +23,7 @@ cube = blobs.cube(psi4_wfn)
 cube.plot("Da.cube", iso=0.03)
 ```
 
-For the a Jupyter tutorial download and run:
-/blobs/tutorial/Cube_Plot_Basics.ipynb 
+For a full Jupyter tutorial visit [here](https://github.com/VHchavez/blobs/blob/master/blobs/tutorial/Cube_Plot_Basics.ipynb).
 
 
 ### Required Packages
@@ -37,11 +36,11 @@ conda activate p4env
 conda install -c plotly plotly
 ```
 
-More info and tutorials on their corresponding repositories: 
+More information on their corresponding repositories: 
 
-<p float="left">
-  <a href="https://github.com/psi4/psi4numpy"><img src="https://molssi.org/wp-content/uploads/2018/06/psi4numpybanner_eqn-1200x390_c.jpg" height=50 /></a>
-  <a href="https://www.github.com/plotly/plotly.py"><img src="https://prismic-io.s3.amazonaws.com/plotly%2F6ea9b995-cdd8-49cb-b058-38bd44c1982d_plotly-logo-01-stripe%402x.png" height=50 /></a>
+<p align="center">
+  <a href="https://github.com/psi4/psi4numpy"><img src="https://molssi.org/wp-content/uploads/2018/06/psi4numpybanner_eqn-1200x390_c.jpg" height=80 /></a>
+  <a href="https://www.github.com/plotly/plotly.py"><img src="https://prismic-io.s3.amazonaws.com/plotly%2F6ea9b995-cdd8-49cb-b058-38bd44c1982d_plotly-logo-01-stripe%402x.png" height=80 /></a>
 </p>
 
 
