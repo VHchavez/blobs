@@ -5,6 +5,7 @@ Psi4 cube files visualization tool
 
 import numpy as np
 import psi4
+import blobs
 
 import plotly.graph_objects as go
 import plotly.express as px
@@ -13,6 +14,8 @@ import plotly.express as px
 
 class Cube():
     def __init__(self, wfn):
+        psi4.set_options({"cubic_grid_spacing" : [0.2, 0.2, 0.2], 
+                          "cubic_grid_overage" : [4.0, 4.0, 4.0]})
         psi4.cubeprop(wfn)
         self.wfn = wfn
         self.geometry = self.wfn.molecule()
