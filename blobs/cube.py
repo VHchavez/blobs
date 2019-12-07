@@ -12,7 +12,7 @@ import plotly.express as px
 
 
 
-class Manager():
+class Cube():
     def __init__(self, wfn):
         psi4.cubeprop(wfn)
         self.wfn = wfn
