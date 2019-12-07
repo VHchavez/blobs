@@ -3,7 +3,7 @@
 <br>
 <img src="docs/media/logo_vertical.png" alt="Blobs" height=300> <br><br>
 <a href="https://travis-ci.org/VHChavez/blobs"><img src="https://travis-ci.org/VHChavez/blobs.svg?branch=master"></a>
-<a href="https://ci.appveyor.com/project/VHchavez/blobs/branch/master"><img src="https://ci.appveyor.com/api/projects/status/REPLACE_WITH_APPVEYOR_LINK/branch/master?svg=true"></a>
+<a href="https://ci.appveyor.com/project/VHchavez/blobs"><img src="https://ci.appveyor.com/api/projects/status/REPLACE_WITH_APPVEYOR_LINK/branch/master?svg=true"></a>
 <a href="https://opensource.org/licenses/BSD-3-Clause"><img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" /></a>
 <br>
 </p>
