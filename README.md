@@ -16,7 +16,7 @@
 
 ### Overview
 
-This package lets you plot cube files produced with [Psi4](https://www.github.com/psi4/psi4) directly in a Jupyter Notebook. Visualizing a cube is as simple as:
+Plot cube files produced with [Psi4](https://www.github.com/psi4/psi4) directly in a Jupyter Notebook. Visualizing a cube is as simple as:
 ```
 import blobs
 cube = blobs.cube(psi4_wfn)
