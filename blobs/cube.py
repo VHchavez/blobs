@@ -143,7 +143,7 @@ class Cube():
                                         "opacity": 1.0,
                                         "line": {
                                             "width": 2,
-                                            "color": "gainsboro"
+                                            "color": "black"
                                         }
                                     })
 
