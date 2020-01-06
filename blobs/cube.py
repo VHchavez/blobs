@@ -195,7 +195,8 @@ class Cube():
                                   "showline": False,
                                   "title": "",
                                   "ticks": '',
-                                  "showticklabels": False
+                                  "showticklabels": False, 
+                                  "showspikes" : False
                               },
                               "yaxis": {
                                   "autorange": True,
@@ -204,7 +205,9 @@ class Cube():
                                   "showline": False,
                                   "title": "",
                                   "ticks": '',
-                                  "showticklabels": False
+                                  "showticklabels": False, 
+                                  "showspikes": False
+                                  
                               },
                               "zaxis": {
                                   "autorange": True,
@@ -213,7 +216,8 @@ class Cube():
                                   "showline": False,
                                   "title": "",
                                   "ticks": '',
-                                  "showticklabels": False
+                                  "showticklabels": False, 
+                                  "showspikes": False
                               }
                           })
 
