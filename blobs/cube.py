@@ -96,6 +96,7 @@ class Cube():
              plot_geometry=True,
              plot_bonds=True):
 
+        atoms_colors = blobs.get_colors()
         cube, meta = cube_to_array(cube_file)
         self.meta = meta
 
@@ -130,7 +131,6 @@ class Cube():
             data.append(vol_data_neg)
 
         if plot_geometry == True:
-
             geo_data = go.Scatter3d(x=self.info["x"],
                                     y=self.info["y"],
                                     z=self.info["z"],
@@ -152,24 +152,47 @@ class Cube():
         fig = go.Figure(data=data)
 
         if plot_bonds == True:
-
+            
             bonds = build_bond_list(self.geometry.geometry().np)
 
             for i in range(len(bonds)):
+                
+                midx  = (self.info["x"][bonds[i][0]] + self.info["x"][bonds[i][1]]) / 2
+                midy  = (self.info["y"][bonds[i][0]] + self.info["y"][bonds[i][1]]) / 2
+                midz  = (self.info["z"][bonds[i][0]] + self.info["z"][bonds[i][1]]) / 2
+                
+                bond_color_1= atoms_colors[self.info["sym"][bonds[i][0]]][0]
+                bond_color_2= atoms_colors[self.info["sym"][bonds[i][1]]][0]
 
-                bond_x = [self.info["x"][bonds[i][0]], self.info["x"][bonds[i][1]]]
-                bond_y = [self.info["y"][bonds[i][0]], self.info["y"][bonds[i][1]]]
-                bond_z = [self.info["z"][bonds[i][0]], self.info["z"][bonds[i][1]]]
+                bond_x_1 = [self.info["x"][bonds[i][0]], midx]
+                bond_y_1 = [self.info["y"][bonds[i][0]], midy]
+                bond_z_1 = [self.info["z"][bonds[i][0]], midz]
+
+                bond_x_2 = [self.info["x"][bonds[i][1]], midx]
+                bond_y_2 = [self.info["y"][bonds[i][1]], midy]
+                bond_z_2 = [self.info["z"][bonds[i][1]], midz]
 
                 fig.add_trace(
                     go.Scatter3d(
-                        x=bond_x,
-                        y=bond_y,
-                        z=bond_z,
+                        x=bond_x_1,
+                        y=bond_y_1,
+                        z=bond_z_1,
                         mode="lines",
                         line={
-                            "color": "grey",
-                            "width": 2
+                            "color": bond_color_1,
+                            "width": 7 * size
+                        },
+                    ))
+
+                fig.add_trace(
+                    go.Scatter3d(
+                        x=bond_x_2,
+                        y=bond_y_2,
+                        z=bond_z_2,
+                        mode="lines",
+                        line={
+                            "color": bond_color_2,
+                            "width": 7 * size
                         },
                     ))
 
