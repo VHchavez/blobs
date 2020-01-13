@@ -142,7 +142,7 @@ class Cube():
                                         "showscale": False,
                                         "opacity": 1.0,
                                         "line": {
-                                            "width": 2,
+                                            "width": 10,
                                             "color": "black"
                                         }
                                     })
@@ -171,7 +171,7 @@ class Cube():
                 bond_x_2 = [self.info["x"][bonds[i][1]], midx]
                 bond_y_2 = [self.info["y"][bonds[i][1]], midy]
                 bond_z_2 = [self.info["z"][bonds[i][1]], midz]
-
+                
                 fig.add_trace(
                     go.Scatter3d(
                         x=bond_x_1,
@@ -195,6 +195,7 @@ class Cube():
                             "width": 7 * size
                         },
                     ))
+        
 
         layout = go.layout.Template(layout=go.Layout(title_font=dict(family="Rockwell", size=24)))
 
@@ -218,7 +219,8 @@ class Cube():
                                   "showline": False,
                                   "title": "",
                                   "ticks": '',
-                                  "showticklabels": False, 
+                                  "showticklabels": False,
+                                  "showbackground": False,  
                                   "showspikes" : False
                               },
                               "yaxis": {
@@ -228,7 +230,8 @@ class Cube():
                                   "showline": False,
                                   "title": "",
                                   "ticks": '',
-                                  "showticklabels": False, 
+                                  "showticklabels": False,
+                                  "showbackground": False,  
                                   "showspikes": False
                                   
                               },
@@ -239,6 +242,7 @@ class Cube():
                                   "showline": False,
                                   "title": "",
                                   "ticks": '',
+                                  "showbackground": False,
                                   "showticklabels": False, 
                                   "showspikes": False
                               }
