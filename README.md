@@ -18,8 +18,18 @@
 
 Plot cube files produced with [Psi4](https://www.github.com/psi4/psi4) directly in a Jupyter Notebook. Visualizing a cube is as simple as:
 ```
+# Psi4 Calculation
+import psi4 
+be2 = psi4.molecule("""
+0 1 
+Be 0.0 0.0 0.0
+Be 0.0 0.0 2.39
+""")
+energy, wfn = psi4.energy("SCF/cc-pVDZ", molecule=be2)
+
+#Visualization with blobs
 import blobs
-cube = blobs.cube(psi4_wfn)
+cube = blobs.cube(wfn)
 cube.plot("Da.cube", iso=0.03)
 ```
 
@@ -48,7 +58,7 @@ More information on their corresponding repositories:
 ```
 git clone https://github.com/VHchavez/blobs
 cd blobs
-pip install --user -e .
+pip install .
 ```
 
 
