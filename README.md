@@ -58,7 +58,7 @@ More information on their corresponding repositories:
 ```
 git clone https://github.com/VHchavez/blobs
 cd blobs
-pip install --user -e .
+pip install .
 ```
 
 
