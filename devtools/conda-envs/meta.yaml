@@ -1,0 +1,27 @@
+package:
+    name: blobs
+
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+    # Base depends
+  - python
+  - pip
+  - pyplot
+  - numpy
+
+    # Testing
+  - pytest
+  - pytest-cov
+  - codecov
+
+requirements:
+    build:
+        - python
+        - numpy
+
+    # Pip-only installs
+  #- pip:
+  #  - codecov
+
