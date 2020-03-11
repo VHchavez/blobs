@@ -1,5 +1,5 @@
 
-### *blobs is no longer getting updates. Visit the project [moly](https://github.com/VHchavez/moly) instead*
+### *blobs is no longer being developed. For better and enhanced functionality, visit the project [moly](https://github.com/VHchavez/moly) instead*
 <p align="center">
 <br>
 <img src="docs/media/logo_vertical.png" alt="Blobs" height=300> <br><br>
