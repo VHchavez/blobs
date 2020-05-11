@@ -19,7 +19,7 @@ class Freq():
         self.geo = self.mol.to_arrays()[0]
         self.sym = self.mol.to_arrays()[2]
         self.indices = self.get_index()
-        self.frequencies = wfn.frequency_analysis["omega"][2][self.indices]
+        self.frequencies = wfn.frequency_analysis["omega"].dict()["data"][self.indices]
         self.info = self.get_info()
         self.bonds = None
         self.norm = None
@@ -47,8 +47,8 @@ class Freq():
     
     def get_index(self):
         vib_index = []
-        for i in range(len(self.wfn.frequency_analysis["TRV"][2])):
-            if self.wfn.frequency_analysis["TRV"][2][i] == "V":
+        for i, j in enumerate(self.wfn.frequency_analysis["TRV"].dict()["data"]):
+            if j == "V":
                 vib_index.append(i)
         return vib_index
     
@@ -63,7 +63,7 @@ class Freq():
         bonds = build_bond_list(self.geo)   
         self.bonds = bonds    
         fms = []
-        norm_coord = self.wfn.frequency_analysis['x'][2][:,self.indices].T.reshape(len(self.indices),len(self.geo),3)
+        norm_coord = self.wfn.frequency_analysis['x'].dict()["data"][:,self.indices].T.reshape(len(self.indices),len(self.geo),3)
         self.norm = norm_coord
                        
         for frame in range(nframes - 1):
