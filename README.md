@@ -1,4 +1,5 @@
 
+### *blobs is no longer being developed. For better and enhanced functionality, visit the project [moly](https://github.com/VHchavez/moly) instead*
 <p align="center">
 <br>
 <img src="docs/media/logo_vertical.png" alt="Blobs" height=300> <br><br>
@@ -14,26 +15,33 @@
 
 ---
 
+
 ### Overview
 
 Plot cube files produced with [Psi4](https://www.github.com/psi4/psi4) directly in a Jupyter Notebook. Visualizing a cube is as simple as:
 ```
 # Psi4 Calculation
 import psi4 
-be2 = psi4.molecule("""
+be2 = psi4.geometry("""
 0 1 
-Be 0.0 0.0 0.0
-Be 0.0 0.0 2.39
+  H      1.0686     -0.1411      1.0408
+  C      0.5979      0.0151      0.0688
+  H      1.2687      0.2002     -0.7717
+  O     -0.5960     -0.0151     -0.0686
 """)
-energy, wfn = psi4.energy("SCF/cc-pVDZ", molecule=be2)
+
+psi4.set_options({"cubeprop_tasks" : ['density', 'orbitals'],
+                  "cubeprop_orbitals" : [8, 9]})
+
+energy, wfn = psi4.energy("SCF/cc-pVDZ", molecule=be2,return_wfn=True)
 
 #Visualization with blobs
 import blobs
-cube = blobs.cube(wfn)
+cube = blobs.Cube(wfn)
 cube.plot("Da.cube", iso=0.03)
 ```
 
-For a full Jupyter tutorial visit [here](https://github.com/VHchavez/blobs/blob/master/blobs/tutorial/Cube_Plot_Basics.ipynb).
+For a full Jupyter tutorial visit [here](https://github.com/VHchavez/blobs/blob/b32ede91d43514fe24e15c9da0a2ebbb43d383e9/blobs/tutorial/Cube_Plot_Basics.ipynb).
 
 
 ### Required Packages
